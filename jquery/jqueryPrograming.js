@@ -61,6 +61,36 @@
 //     $(".output").html($(".input").val())
 // })
 
-$(".input").keyup(function(){
-    $(".output").html($(".input").val())
-})
+// $(".input").keyup(function(){
+//     $(".output").html($(".input").val())
+// })
+
+
+//  -----------------------------------FORM EVENTS IN JQUERY---------------------------------------
+
+//este folosit cand facem click in input
+
+// $(".input").focus(function(){
+
+//    $(this).css("background-color","red")
+// })
+
+
+//este folosit cand dam click inafara inputului
+
+// $(".input").blur(function(){
+
+//     $(this).css("background-color","blue")
+// })
+
+// $(".input").change(function(){
+
+// alert("ai adaugat ceva in input si ai iesit din focus input")
+// })
+
+// //si asa facem submit la un formular
+// $("form").submit(function(){
+// alert("form submited")
+// })
+
+//  -----------------------------------WINDOW EVENTS IN JQUERY---------------------------------------

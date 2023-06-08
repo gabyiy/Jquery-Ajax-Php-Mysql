@@ -12,8 +12,13 @@
     <title>Document</title>
 </head>
 <body>
+
+<form >
    <input type="text" class="input">
+   <input type="submit" value="click me" class="clickme">
+   </form>
    <p class="output">lol</p>
+
 <script type = "text/javascript" src="jqueryPrograming.js" ></script>
 </body>
 </html>
