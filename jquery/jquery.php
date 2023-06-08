@@ -13,7 +13,7 @@
 </head>
 <body>
    <input type="text" class="input">
-   <p class="output"></p>
+   <p class="output">lol</p>
 <script type = "text/javascript" src="jqueryPrograming.js" ></script>
 </body>
 </html>
