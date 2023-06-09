@@ -13,12 +13,9 @@
 </head>
 <body>
 
-<form >
-   <input type="text" class="input">
-   <input type="submit" value="click me" class="clickme">
-   </form>
-   <p class="output">lol</p>
-
+<p class="fName"></p>
+<p>second paragraph</p>
+<input type="text" id="name" placeholder=" Enter you r fist name"/>
 <script type = "text/javascript" src="jqueryPrograming.js" ></script>
 </body>
 </html>

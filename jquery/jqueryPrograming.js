@@ -94,3 +94,81 @@
 // })
 
 //  -----------------------------------WINDOW EVENTS IN JQUERY---------------------------------------
+
+//functia on ,care atunci cand deschidem pagina ne arata ce dorim, aceasta are 2 parametri (load= adica 
+//atunci cand se incarca si al doilea este functia)
+
+//  $(window).on("load",function(){
+//     $("body").css("height","2000px")
+//     alert("window")
+//  })
+// $(window).on("unload",function(){
+//     alert("activat la unload")
+// })
+// $(window).on("scroll",function(){
+//     alert("ai facut scroll")
+// })
+
+// $(window).on("resize",function(){
+//     alert("i-m resizing")
+// })
+
+//  -----------------------------------HIDE AND SHOW IN JQUERY---------------------------------------
+
+
+// $("input").change(function(){
+//     var num = $(this).val()
+//     $(window).on("load",function(){
+//         $("p.hide").hide()
+//     })
+//     if($("input").val()<10){
+//         $("p").html("ai introdus numar" + num)
+//         $("p.show").show(1000)
+//         $("p.hide").hide()
+//     }else if ($("input").val()>10){
+//         $("p").html("ai introdus un numar mai mare ca 10, mai exact" + $("input").val())
+//         $(window).on("unload",function(){
+//             $("p.hide").hide()
+//             $("p.show").show(1000)
+//         })
+//     }
+// })
+
+// ------------------------------------------  HOW TO GET HTML CONTENT IN JQUERY-----------------------------
+
+
+// alert($("p:first-child").html())
+// alert($("p:nth-child(2)").text())
+
+// //asa luam scoate valoare care o introducem la placeholder ,sau de la src de exeplu
+// alert($("#name").attr("placeholder"))
+
+//  -----------------------------------SETTING CONTENT  IN JQUERY---------------------------------------
+
+//folosim acelasi model ca la get html content
+// .val() scoate valuare care este introdusa intrun input
+// $("html").click(function(){
+// $("p:first-child").html("first child")
+// $("p:nth-child(2)").html("second child")
+// $("#name").attr("placeholder","just changed placeholder name")
+// })
+
+//  -----------------------------------CREATING HTML CONTENT  IN JQUERY---------------------------------------
+
+// var content1 = "<p class('content1')>am creat content< folosind html/p>"
+// var content2 = $("<p class='content2'></p>").text("am creat content folosind jquery")
+// var content3 = document.createElement("p")
+
+//  -----------------------------------ADDING HTML CONTENT  IN JQUERY---------------------------------------
+
+var content1 = "<p class='content1'>am creat content< folosind html</p>"
+var content2 = $("<p class='content2'></p>").text("am creat content folosind jquery")
+var content3 = document.createElement("p")
+
+$("body").append(content1,content2)
+
+
+$(".content2").append("<b>Am adaugat content in fata</b>")
+(".content2").before("<h1>Am adaugat content inainte</h1>")
+$(".content2").after("<h1>Am adaugat content inainte</h1>")
+$(".content2").prepend("<b>Am adaugat content in spate</b>")
