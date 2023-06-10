@@ -161,14 +161,176 @@
 
 //  -----------------------------------ADDING HTML CONTENT  IN JQUERY---------------------------------------
 
-var content1 = "<p class='content1'>am creat content< folosind html</p>"
-var content2 = $("<p class='content2'></p>").text("am creat content folosind jquery")
-var content3 = document.createElement("p")
+// var content1 = "<p class='content1'>am creat content folosind html</p>"
+// var content2 = $("<p class='content2'></p>").text("am adaugat mai adaugat text folosind jquery")
+// var content3 = document.createElement("p")
 
-$("body").append(content1,content2)
+// =====>>>         cu append practic facem ca content1 si 2 sa fie childrens la body
+// 
+//$("body").append(content1,content2)
+
+// $(".content2").append("<b>Am adaugat content in fata</b>")
+// $(".content2").prepend("<b>Am adaugat content in spate</b>")
+
+// =====>>>>                in schimb cu before si after este creat ca un nou element si nu ca un child
+
+// $(".content1").before("<h1>Am adaugat content inainte</h1>")
+// $(".content1").after("<h1>Am adaugat content inainte</h1>")
+
+//  -----------------------------------REMOVING HTML CONTENT  IN JQUERY---------------------------------------
+
+//====>>>>>>>>   cu empty golim ce avem in div
+// $(".div2").empty()
+
+// //==========>>>>>>>>>> cu remove stergemn tot divu
+// //$(".div2").remove()
+
+// $(".div2").append('<p><b>Am creat un paragraph bold</b></p>')
 
 
-$(".content2").append("<b>Am adaugat content in fata</b>")
-(".content2").before("<h1>Am adaugat content inainte</h1>")
-$(".content2").after("<h1>Am adaugat content inainte</h1>")
-$(".content2").prepend("<b>Am adaugat content in spate</b>")
+//  -----------------------------------TRAVERSING ANCESTOR IN JQUERY---------------------------------------
+
+
+//=====================>>> asa accesam parintele , si cu parinti afectam toti parinti
+
+// $(".last-div").parent().css("background-color","red")
+//$(".last-div").parentsUntil("body").css("background-color","red")
+// $(".last-div").parents().css("background-color","red")
+
+//  -----------------------------------DESCENDANT ANCESTOR IN JQUERY---------------------------------------
+
+
+//========>>>>>>> asignam culuare la toti copii de primu grad nu si cei aflat in interioru copiilor (nepoti si stranepoti)
+// $(".outer").children().css("background-color","blue")
+
+// $(".outer").find("p").css("background-color","red")
+
+//  -----------------------------------SIBLING TRAVERSAL  IN JQUERY---------------------------------------
+
+// $("h1").siblings().css("background-color","red")
+
+// ====>>>>> asa selectionam toti frati mai putin h1
+//$(".inner h1").siblings().css("background-color","red")
+
+// ======>>>>>>>> asa accesam urmatoru h1 care este frate cu divu cu clasa last-div, iar cu all accesam toate
+//elementele h1 
+// $(".last-div h1").next().css("background-color","red")
+// $(".last-div h1").nextUntil(".midlle").css("background-color","red")
+
+
+// $(".last-div h1").prev().css("background-color","red")
+// $(".last-div h1").prevUntil(".middle").css("background-color","red")
+// $(".last-div h1").prevAll().css("background-color","red")
+
+//  -----------------------------------JQUERY  AJAX : LOAD METHOD P1---------------------------------------
+
+
+//=======================>>>>>>>>>>>asa incarcam ca avem intrun fisier exterm
+//$(".load").load("/syntax.html")
+
+// $(".but").on("click",function () { 
+// $(".load").load("/syntax.html")
+//  })
+
+//=======================>>>>>>>>>>> asa incarcam doar ceva specific cum ar fi id (cotine 3 argumente,
+// 1 este url al doile este data si un calback  )
+// $(".but").click(function () { 
+// $(".load").load("/syntax.html #para1",function(response,status,xhr){
+//     if (status=="success"){
+// $(".status").html("<p class='success'><b>Action performed succesufuly</b></p>")
+//     }
+//     if(status=="error"){
+//         $(".status").html("Action failed")
+//     }
+// })
+//  })
+
+//  -----------------------------------JQUERY  AJAX : GET HTTP REQUEST P1---------------------------------------
+
+//asa ffacem un request ( prim parametru este unde , al doile este ce trimtem si dupa functi)
+        // $("#but").click(function () { 
+        //     var name = $("#name").val()
+        //     $.get('get-request.php',{name:name},function(response,status,xhr){
+        //         $(".transfer").text(response)
+              
+        //     }
+            
+        //     )
+
+        //  })
+//  -----------------------------------JQUERY  AJAX : POST HTTP REQUEST P3---------------------------------------
+
+        // $("#but").click(function () { 
+        //     var name = $("#name").val()
+        //     $.post('post-request.php',{name:name},function(response,status,xhr){
+        //         $(".transfer").text(response)
+              
+        //     }   
+        //     )
+        //  })
+
+        //  -----------------------------------JQUERY  $.ajax---------------------------------------
+
+        //in url spunem unde trimite requestu, in al doilea spune min caz ca este success sa aplice functia
+        // data fiind raspunsu si cu data trimite numele la php
+// $("#but").click(function () {
+
+//     var name = $("#name").val()
+//     $.ajax({
+//         //putem predefin type ( daca nu adaugam type ramne get)
+//         type:"POST",
+//         url:"get-request.php",
+//         data:"name=" + name,
+//         success:function (response) { 
+//             $(".response").html(response)
+//          }
+//     })
+//   })
+
+
+        //  -----------------------------------USING EACH METHOD IN JQUERY ---------------------------------------
+
+// $("#but").click(function(){
+//     $("p").each( function (indexInArray, valueOfElement) { 
+//          $("body").append("lol<br>")
+
+//          $(this).html("am schimbat textu din p cu referindule la el cu this")
+//     });
+// })
+   
+        //  -----------------------------------CSS MANIPULATION ADDING CLASSES JQUERY ---------------------------------------
+
+//      $("#but").click(function () {
+// //se paote adauga clasa direct in element
+//       $("body").append("<h1 class='gg'>gg</h1>")
+//       $("h1").css("background-color","green")
+
+//      })
+//      //sau asa
+//     // $(".gg").addClass("red")
+
+
+//           //  -----------------------------------CSS MANIPULATION REMOVING CLASSES JQUERY ---------------------------------------
+
+//           $("#remove").click(function () {
+//             $("h1").removeClass("background-color","green")
+//               })
+
+        //  -----------------------------------CSS MANIPULATION ADDING CSS STYLE DINAMICALLY JQUERY ---------------------------------------
+
+        // $("#but").click(function () {
+        //     //se paote adauga clasa direct in element
+        //           $("body").append("<p class='gg'><b>gg</b></p>")
+        //         //  $("p").css("color","green" )
+            
+        //         //ca sa adaugam mai multe proprietati facem un obiect
+        //         $("p").css({"font-size":"40px", "color":"red"})
+        //          })
+
+
+ //  -----------------------------------CSS MANIPULATION TOGLE CLASS JQUERY ---------------------------------------
+
+
+//  $("#toggle").click(function(){
+//     $("p").toggleClass("red")
+//  })
